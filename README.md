@@ -16,6 +16,18 @@ Este proyecto es una suite de automatización de pruebas para el sitio web de **
 - **Specs**: Use Specs para definir los escenarios de prueba, porque es más rápido, pero de mi preferencia usaría BDD con Cucumber y las clases test steps.
 - **Reporte**: Uso los reportes de Playwright, también porque el tiempo apremia, pero utilizaría los reportes de Allure.
 
+## 📝 Escenarios de Prueba Detallados
+
+Se han implementado los siguientes escenarios para cubrir las funcionalidades clave del sitio:
+
+### 🟢 Pruebas de Búsqueda (`search.spec.ts`)
+1. **01 Búsqueda válida IDA**: Verifica que un usuario pueda buscar pasajes de ida con éxito (ej. Retiro a Jesús María) para una fecha específica. Valida que se presenten resultados y el título de la página sea correcto.
+2. **02 Búsqueda válida IDA y VUELTA**: Utiliza lógica dinámica para seleccionar fechas (Salida: Hoy + 7 días, Regreso: Hoy + 14 días). Valida la correcta navegación y visualización de ofertas en ambos tramos.
+3. **03 Búsqueda Sin Resultados**: Valida que el sistema maneje correctamente búsquedas con combinaciones de destino/fecha sin disponibilidad (ej. Tierra del Fuego a Salta en Julio). Se verifica la visibilidad del botón para realizar una nueva búsqueda.
+
+### 🔴 Pruebas de Error (`error.spec.ts`)
+1. **Busqueda con Error IDA**: Escenario diseñado para forzar un fallo controlado en la suite. Esto permite validar la generación de reportes de error, capturas de pantalla automáticas y la robustez del flujo de CI/CD ante fallos inesperados.
+
 ## 🛠️ Instalación y Configuración
 
 Siga estos pasos para configurar el entorno localmente:
