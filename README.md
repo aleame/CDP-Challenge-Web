@@ -44,6 +44,23 @@ Para ver el reporte HTML después de la ejecución:
 npx playwright show-report
 ```
 
+## 📁 Estructura del Proyecto
+
+```text
+.
+├── .github/workflows/   # Configuraciones de CI/CD (GitHub Actions)
+├── src/
+│   ├── helpers/         # Funciones de utilidad y apoyo
+│   ├── locators/        # Selectores de elementos de la interfaz
+│   ├── pages/           # Objetos de página (logica de interacción)
+│   ├── schema/          # Definición de tipos e interfaces (TypeScript)
+│   └── specs/           # Archivos de pruebas (escenarios de ejecución)
+├── playwright.config.ts # Configuración global de Playwright
+├── package.json         # Dependencias y scripts del proyecto
+├── .gitignore           # Archivos excluidos de Git
+└── README.md            # Documentación principal
+```
+
 ## 🏗️ Arquitectura: Patrón Page Object Model (POM)
 
 El proyecto utiliza el patrón **Page Object Model**, el cual es una de las mejores prácticas en automatización. Esta arquitectura permite separar la lógica de las pruebas de la lógica de interacción con la página.
@@ -67,7 +84,7 @@ El proyecto cuenta con un flujo de trabajo en **GitHub Actions** para asegurar l
 
 - **Ejecución Programada**: Las pruebas se ejecutan automáticamente todos los **lunes a las 15:00 ART** (18:00 UTC).
 - **Ejecución por Eventos**: Se dispara automáticamente en cada `push` o `pull_request` a las ramas principales, ejecutando únicamente el script **`test:search`**.
-- **Reportes**: Los resultados y reportes HTML se guardan como artefactos en cada ejecución de GitHub Actions.
+- **Reportes**: Los resultados y reportes HTML se publican automáticamente en **[GitHub Pages](https://aleame.github.io/CDP-Challenge-Web/)**.
 
 ---
 *Desarrollado para el desafío técnico de CDP.*
