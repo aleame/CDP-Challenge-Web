@@ -66,7 +66,7 @@ El proyecto utiliza el patrón **Page Object Model**, el cual es una de las mejo
 El proyecto cuenta con un flujo de trabajo en **GitHub Actions** para asegurar la calidad continua:
 
 - **Ejecución Programada**: Las pruebas se ejecutan automáticamente todos los **lunes a las 15:00 ART** (18:00 UTC).
-- **Ejecución por Eventos**: Se dispara automáticamente en cada `push` o `pull_request` a las ramas principales.
+- **Ejecución por Eventos**: Se dispara automáticamente en cada `push` o `pull_request` a las ramas principales, ejecutando únicamente el script **`test:search`**.
 - **Reportes**: Los resultados y reportes HTML se guardan como artefactos en cada ejecución de GitHub Actions.
 
 ---
