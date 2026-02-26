@@ -45,7 +45,7 @@ jobs:
 
   deploy:
     needs: test
-    if: always()
+    if: always() && github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     permissions:
       pages: write
       id-token: write
