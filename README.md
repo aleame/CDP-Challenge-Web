@@ -8,6 +8,14 @@ Este proyecto es una suite de automatización de pruebas para el sitio web de **
 - **🟦 TypeScript**: Lenguaje que añade tipado estático, mejorando el mantenimiento y legibilidad.
 - **🟢 Node.js**: Entorno de ejecución para JavaScript.
 
+## 🎯 Justificación de las decisiones técnicas
+
+- **TypeScript**: Elegí TypeScript por sobre JavaScript para añadir tipado estático, lo que mejora la legibilidad del código, según mi perspectiva.
+- **Page Object Model**: Elegí POM para estructurar el código, lo que facilita el mantenimiento, legibilidad y reusabilidad del código, tanto así como su escalabilidad. Por eso también implementé las clases de los Locators.
+- **GitHub Pages**: Implementé GitHub Pages para publicar los reportes de las pruebas en el repo de GitHub, ya que es una herramienta gratuita y fácil de usar.
+- **Specs**: Use Specs para definir los escenarios de prueba, porque es más rápido, pero de mi preferencia usaría BDD con Cucumber y las clases test steps.
+- **Reporte**: Uso los reportes de Playwright, también porque el tiempo apremia, pero utilizaría los reportes de Allure.
+
 ## 🛠️ Instalación y Configuración
 
 Siga estos pasos para configurar el entorno localmente:
