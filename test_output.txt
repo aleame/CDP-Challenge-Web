@@ -1,0 +1,201 @@
+
+Running 2 tests using 1 worker
+
+  ✘  1 [chromium] › src/specs/search.spec.ts:12:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de Buenos Aires a Rosario para el día 28 (12.0s)
+  ✘  2 [chromium] › src/specs/search.spec.ts:12:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de Buenos Aires a Rosario para el día 28 (retry #1) (11.0s)
+  ✘  3 [chromium] › src/specs/search.spec.ts:12:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de Buenos Aires a Rosario para el día 28 (retry #2) (10.9s)
+  ✘  4 [chromium] › src/specs/search.spec.ts:30:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de ida y vuelta Córdoba a Salta con fechas dinámicas (2.6s)
+  ✘  5 [chromium] › src/specs/search.spec.ts:30:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de ida y vuelta Córdoba a Salta con fechas dinámicas (retry #1) (3.4s)
+  ✘  6 [chromium] › src/specs/search.spec.ts:30:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de ida y vuelta Córdoba a Salta con fechas dinámicas (retry #2) (2.5s)
+
+
+  1) [chromium] › src/specs/search.spec.ts:12:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de Buenos Aires a Rosario para el día 28 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*venda.*/i[39m
+    Received string:  [31m"https://www.centraldepasajes.com.ar/cdp/pasajes-micro/retiro-buenos-aires/rosario?FIda=02/28/2026&CntPas=1"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    7 × unexpected value "https://www.centraldepasajes.com.ar/cdp/pasajes-micro/retiro-buenos-aires/rosario?FIda=02/28/2026&CntPas=1"[22m
+
+
+      22 |         // Verificamos que la URL haya cambiado o que aparezcan resultados
+      23 |         // La URL suele contener 'venda' o similar después de la búsqueda
+    > 24 |         await expect(page).toHaveURL(/.*venda.*/i);
+         |                            ^
+      25 |
+      26 |         // También podemos verificar que aparezca algún elemento de la grilla de resultados
+      27 |         // (Esto dependería de conocer los locators de la página de resultados)
+        at /home/alex/git/cdp_challenge_web/src/specs/search.spec.ts:24:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*venda.*/i[39m
+    Received string:  [31m"https://www.centraldepasajes.com.ar/cdp/pasajes-micro/retiro-buenos-aires/rosario?FIda=02/28/2026&CntPas=1"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    7 × unexpected value "https://www.centraldepasajes.com.ar/cdp/pasajes-micro/retiro-buenos-aires/rosario?FIda=02/28/2026&CntPas=1"[22m
+
+
+      22 |         // Verificamos que la URL haya cambiado o que aparezcan resultados
+      23 |         // La URL suele contener 'venda' o similar después de la búsqueda
+    > 24 |         await expect(page).toHaveURL(/.*venda.*/i);
+         |                            ^
+      25 |
+      26 |         // También podemos verificar que aparezca algún elemento de la grilla de resultados
+      27 |         // (Esto dependería de conocer los locators de la página de resultados)
+        at /home/alex/git/cdp_challenge_web/src/specs/search.spec.ts:24:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium-retry1/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/.*venda.*/i[39m
+    Received string:  [31m"https://www.centraldepasajes.com.ar/cdp/pasajes-micro/retiro-buenos-aires/rosario?FIda=02/28/2026&CntPas=1"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 5000ms[22m
+    [2m    7 × unexpected value "https://www.centraldepasajes.com.ar/cdp/pasajes-micro/retiro-buenos-aires/rosario?FIda=02/28/2026&CntPas=1"[22m
+
+
+      22 |         // Verificamos que la URL haya cambiado o que aparezcan resultados
+      23 |         // La URL suele contener 'venda' o similar después de la búsqueda
+    > 24 |         await expect(page).toHaveURL(/.*venda.*/i);
+         |                            ^
+      25 |
+      26 |         // También podemos verificar que aparezca algún elemento de la grilla de resultados
+      27 |         // (Esto dependería de conocer los locators de la página de resultados)
+        at /home/alex/git/cdp_challenge_web/src/specs/search.spec.ts:24:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium-retry2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/search-Búsqueda-de-Pasajes-b02f4-es-a-Rosario-para-el-día-28-chromium-retry2/error-context.md
+
+  2) [chromium] › src/specs/search.spec.ts:30:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de ida y vuelta Córdoba a Salta con fechas dinámicas 
+
+    Error: locator.isVisible: Error: strict mode violation: locator('.date-picker-wrapper').filter({ visible: true }) resolved to 2 elements:
+        1) <div unselectable="on" class="date-picker-wrapper single-date  no-shortcuts  inline-wrapper no-gap single-month">…</div> aka getByText('Seleccionado: 03-03-2026errorPor favor selecciona un díaCerrar ← Marzo 2026 →')
+        2) <div unselectable="on" class="date-picker-wrapper single-date  no-shortcuts  inline-wrapper no-gap single-month">…</div> aka getByText('Seleccionado: ...errorPor favor selecciona un díaCerrar ← Marzo 2026 →')
+
+    Call log:
+    [2m    - checking visibility of locator('.date-picker-wrapper').filter({ visible: true })[22m
+
+
+       at ../pages/home.page.ts:54
+
+      52 |     async selectReturnDate(day: string, nextMonth: boolean = false) {
+      53 |         // En algunos casos el calendario de regreso se abre solo tras la ida, pero por seguridad hacemos click
+    > 54 |         if (!await this.page.locator('.date-picker-wrapper').filter({ visible: true }).isVisible()) {
+         |                                                                                        ^
+      55 |             await this.page.click(HomeLocators.returnDateTrigger);
+      56 |         }
+      57 |         await this.page.waitForSelector('.date-picker-wrapper', { state: 'visible' });
+        at HomePage.selectReturnDate (/home/alex/git/cdp_challenge_web/src/pages/home.page.ts:54:88)
+        at HomePage.searchRoundTripTickets (/home/alex/git/cdp_challenge_web/src/pages/home.page.ts:97:20)
+        at /home/alex/git/cdp_challenge_web/src/specs/search.spec.ts:49:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: locator.isVisible: Error: strict mode violation: locator('.date-picker-wrapper').filter({ visible: true }) resolved to 2 elements:
+        1) <div unselectable="on" class="date-picker-wrapper single-date  no-shortcuts  inline-wrapper no-gap single-month">…</div> aka getByText('Seleccionado: 03-03-2026errorPor favor selecciona un díaCerrar ← Marzo 2026 →')
+        2) <div unselectable="on" class="date-picker-wrapper single-date  no-shortcuts  inline-wrapper no-gap single-month">…</div> aka getByText('Seleccionado: ...errorPor favor selecciona un díaCerrar ← Marzo 2026 →')
+
+    Call log:
+    [2m    - checking visibility of locator('.date-picker-wrapper').filter({ visible: true })[22m
+
+
+       at ../pages/home.page.ts:54
+
+      52 |     async selectReturnDate(day: string, nextMonth: boolean = false) {
+      53 |         // En algunos casos el calendario de regreso se abre solo tras la ida, pero por seguridad hacemos click
+    > 54 |         if (!await this.page.locator('.date-picker-wrapper').filter({ visible: true }).isVisible()) {
+         |                                                                                        ^
+      55 |             await this.page.click(HomeLocators.returnDateTrigger);
+      56 |         }
+      57 |         await this.page.waitForSelector('.date-picker-wrapper', { state: 'visible' });
+        at HomePage.selectReturnDate (/home/alex/git/cdp_challenge_web/src/pages/home.page.ts:54:88)
+        at HomePage.searchRoundTripTickets (/home/alex/git/cdp_challenge_web/src/pages/home.page.ts:97:20)
+        at /home/alex/git/cdp_challenge_web/src/specs/search.spec.ts:49:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium-retry1/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: locator.isVisible: Error: strict mode violation: locator('.date-picker-wrapper').filter({ visible: true }) resolved to 2 elements:
+        1) <div unselectable="on" class="date-picker-wrapper single-date  no-shortcuts  inline-wrapper no-gap single-month">…</div> aka getByText('Seleccionado: 03-03-2026errorPor favor selecciona un díaCerrar ← Marzo 2026 →')
+        2) <div unselectable="on" class="date-picker-wrapper single-date  no-shortcuts  inline-wrapper no-gap single-month">…</div> aka getByText('Seleccionado: ...errorPor favor selecciona un díaCerrar ← Marzo 2026 →')
+
+    Call log:
+    [2m    - checking visibility of locator('.date-picker-wrapper').filter({ visible: true })[22m
+
+
+       at ../pages/home.page.ts:54
+
+      52 |     async selectReturnDate(day: string, nextMonth: boolean = false) {
+      53 |         // En algunos casos el calendario de regreso se abre solo tras la ida, pero por seguridad hacemos click
+    > 54 |         if (!await this.page.locator('.date-picker-wrapper').filter({ visible: true }).isVisible()) {
+         |                                                                                        ^
+      55 |             await this.page.click(HomeLocators.returnDateTrigger);
+      56 |         }
+      57 |         await this.page.waitForSelector('.date-picker-wrapper', { state: 'visible' });
+        at HomePage.selectReturnDate (/home/alex/git/cdp_challenge_web/src/pages/home.page.ts:54:88)
+        at HomePage.searchRoundTripTickets (/home/alex/git/cdp_challenge_web/src/pages/home.page.ts:97:20)
+        at /home/alex/git/cdp_challenge_web/src/specs/search.spec.ts:49:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium-retry2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/search-Búsqueda-de-Pasajes-3f5e6--Salta-con-fechas-dinámicas-chromium-retry2/error-context.md
+
+  2 failed
+    [chromium] › src/specs/search.spec.ts:12:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de Buenos Aires a Rosario para el día 28 
+    [chromium] › src/specs/search.spec.ts:30:9 › Búsqueda de Pasajes › Debe permitir buscar pasajes de ida y vuelta Córdoba a Salta con fechas dinámicas 

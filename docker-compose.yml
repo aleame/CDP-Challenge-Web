@@ -1,0 +1,11 @@
+services:
+  playwright:
+    build:
+      context: .
+      network: host
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+    environment:
+      - CI=true
+    command: npx playwright test --project=chromium

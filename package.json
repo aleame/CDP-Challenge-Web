@@ -1,0 +1,20 @@
+{
+  "name": "cdp_challenge_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:search": "npx playwright test src/specs/search.spec.ts",
+    "test:error": "npx playwright test src/specs/error.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  }
+}
